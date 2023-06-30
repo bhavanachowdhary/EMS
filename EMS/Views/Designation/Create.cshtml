@@ -1,0 +1,23 @@
+﻿@model Designation
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Add Designation</h2>
+            <hr/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DesignationName"></label>
+            <input asp-for="DesignationName" class="form-control" />
+            <span asp-validation-for="DesignationName" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+        <a asp-controller="Designation" asp-action="Index" class="btn btn-secondary" style="width:150px">Back</a>
+    </div>
+</form>
+
+@section Scripts{
+@{
+    <partial name="_ValidationScriptsPartial"/>
+}
+}

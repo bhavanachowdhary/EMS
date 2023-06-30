@@ -1,0 +1,38 @@
+﻿@model EmployeeData
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Add Employee</h2>
+            <hr/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Designation"></label>
+            <input asp-for="Designation" class="form-control" />
+            <span asp-validation-for="Designation" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="WorkHourId"></label>
+            <input asp-for="WorkHourId" class="form-control" />
+            <span asp-validation-for="WorkHourId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PaymentRuleId"></label>
+            <input asp-for="PaymentRuleId" class="form-control" />
+            <span asp-validation-for="PaymentRuleId" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-secondary" style="width:150px">Back</a>
+    </div>
+</form>
+
+@section Scripts{
+@{
+    <partial name="_ValidationScriptsPartial"/>
+}
+}
